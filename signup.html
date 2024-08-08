@@ -9,13 +9,13 @@
   <body>
     <div class="container">
       <aside class="signup-image">
-        <figure class="odin-logo">
+        <div class="odin-logo">
           <img
             src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png"
             alt="Odin logo"
           />
-          <figcaption>Odin</figcaption>
-        </figure>
+          Odin
+        </div>
         <div class="caption">
           <p>
             Photo by
@@ -27,47 +27,60 @@
           </p>
         </div>
       </aside>
-      <main class="signup-form-container">
-        <header>
+      <form action="" id="signup-form">
+        <div class="hero">
           <p>
             This is not a real online service! You know you need something like
-            this in your life to help you realize your deepest dreams. Sign up
-            <span>now</span> to get started.
+            this in your life to help you realize your deepest dreams.
+            <br />Sign up <span>now</span> to get started.
           </p>
           <p>You <span>know</span> you want to.</p>
-        </header>
-        <form action="" id="signup-form">
-          <fieldset>
-            <legend>Let's do this!</legend>
-            <div class="form-row">
+        </div>
+        <fieldset>
+          <legend>Let's do this!</legend>
+          <div class="grid-container">
+            <div class="form-item">
               <label for="first-name">Fist name</label>
               <input type="text" id="first-name" name="first-name" />
+              <div class="error"></div>
+            </div>
+            <div class="form-item">
               <label for="last-name">Last name</label>
               <input type="text" id="last-name" name="last-name" />
+              <div class="error"></div>
             </div>
-            <div class="form-row">
+            <div class="form-item">
               <label for="email">Email</label>
               <input type="email" id="email" name="email" />
-              <label for="phone">Phone number</label>
-              <input type="number" id="phone" name="phone" />
+              <div class="error"></div>
             </div>
-            <div class="form-row">
+            <div class="form-item">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" />
+              <div class="error"></div>
+            </div>
+            <div class="form-item">
               <label for="password">Password</label>
               <input type="password" id="password" name="password" />
+              <div class="error"></div>
+            </div>
+            <div class="form-item">
               <label for="password-confirm">Password confirm</label>
               <input
                 type="password"
                 id="password-confirm"
                 name="password-confirm"
               />
+              <div class="error"></div>
             </div>
-          </fieldset>
-        </form>
-        <footer>
-          <button type="button" form="signup-form">Create account</button>
+          </div>
+        </fieldset>
+        <div class="footer">
+          <button type="submit" id="submit-btn" form="signup-form">Create account</button>
           <p>Alredy have an account? <a href="">Log in</a></p>
         </footer>
-      </main>
+      </form>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
