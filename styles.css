@@ -144,7 +144,13 @@ input:focus {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-input:invalid {
+.invalid {
+  border: none;
+  outline: 2px solid #b91c1c;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+input:invalid:focus {
   border: none;
   outline: 2px solid #b91c1c;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
